@@ -1,0 +1,29 @@
+
+
+namespace enums
+{
+	enum PLAYTYPE
+	{
+		LINEUP = 0,
+		OFFENSE = 1,
+		DEFENSE = 2
+	};
+
+	enum PLAYERNAME
+	{
+		BARRETT = 0,
+		JONES,
+		BOLDEN,
+		REDDISH,
+		WILLIMASON,
+		WHITE,
+		DELAURIER,
+		OCONNELL,
+		GOLDWIRE,
+		VRANKOVIC,
+		ROBINSON,
+		BESSER,
+		BUCKMIRE,
+		BAKER
+	};
+}
