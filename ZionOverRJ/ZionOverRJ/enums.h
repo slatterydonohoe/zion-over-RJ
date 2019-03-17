@@ -1,21 +1,42 @@
+//
+//  enums.h
+//  ZionOverRJ
+//
+//  Created by Slattery Donohoe on 3/15/19.
+//  Copyright © 2019 Slattery Donohoe. All rights reserved.
+//
 
+#ifndef enums_h
+#define enums_h
+
+#include <stdio.h>
+#include <string>
 
 namespace enums
 {
 	enum PLAYTYPE
 	{
-		LINEUP = 0,
-		OFFENSE = 1,
-		DEFENSE = 2
+		NOPLAY = 0,
+		DRB,
+		ORB,
+		FGMAKE,
+		FGMISS,
+		FTMAKE,
+		FTMISS,
+		SHFOUL,
+		PFOUL,
+		OFOUL,
+		TOV,
+		LINEUP
 	};
-
-	enum PLAYERNAME
+	
+	enum PLAYER
 	{
-		BARRETT = 0,
+		BARRETT,
 		JONES,
 		BOLDEN,
 		REDDISH,
-		WILLIMASON,
+		WILLIAMSON,
 		WHITE,
 		DELAURIER,
 		OCONNELL,
@@ -27,3 +48,5 @@ namespace enums
 		BAKER
 	};
 }
+
+#endif /* enums_h */
