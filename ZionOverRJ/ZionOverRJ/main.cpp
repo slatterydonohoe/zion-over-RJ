@@ -8,10 +8,13 @@
 
 #include <iostream>
 #include "PlayByPlayParse.h"
+#include "SeasonData.h"
 
 int main(int argc, const char * argv[]) {
 	PlayByPlayParse* parser = new PlayByPlayParse();
 	std::ifstream infile("/Users/slatterydonohoe/Documents/PersonalProjects/zion-over-RJ/ZionOverRJ/ZionOverRJ/testSheet.csv");
 	std::vector<Play*>* plays = parser->parseFile(&infile);
+	SeasonData* data = new SeasonData(plays);
+	
 	return 0;
 }

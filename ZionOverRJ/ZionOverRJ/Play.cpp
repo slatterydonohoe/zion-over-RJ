@@ -8,7 +8,8 @@
 
 #include "Play.h"
 
-Play::Play(enums::PLAYTYPE play, int pts, bool tm) :
+Play::Play(std::string text, enums::PLAYTYPE play, int pts, bool tm) :
+m_text(text),
 m_playType(play),
 m_points(pts),
 m_isTeamPlay(tm),
@@ -19,4 +20,19 @@ m_endOfPoss(false)
 void Play::setEndOfPoss(bool endOfPoss)
 {
 	m_endOfPoss = endOfPoss;
+}
+
+enums::PLAYTYPE Play::getPlayType()
+{
+	return m_playType;
+}
+
+std::string Play::getText()
+{
+	return m_text;
+}
+
+bool Play::getTeamPlay()
+{
+	return m_isTeamPlay;
 }

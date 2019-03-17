@@ -13,6 +13,7 @@
 #include <string>
 #include <fstream>
 #include "Play.h"
+#include "Possession.h"
 #include <vector>
 #include <map>
 

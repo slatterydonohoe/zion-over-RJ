@@ -64,7 +64,7 @@ Play* PlayByPlayParse::parseLine(std::string line)
 	{
 		playType = enums::PLAYTYPE::LINEUP;
 		isTeamPlay = line.find("Devils")!= std::string::npos;
-		return new Play(playType, pts, isTeamPlay);
+		return new Play(line, playType, pts, isTeamPlay);
 	}
 	else
 	{
@@ -104,11 +104,11 @@ Play* PlayByPlayParse::parseLine(std::string line)
 					default:
 						pts = 0;
 				}
-				// TODO: calculate points
-				return new Play(playType, pts, isTeamPlay);
+				return new Play(trimmedLine, playType, pts, isTeamPlay);
 			}
 		}
 		return nullptr;
 	}
 	
 }
+
