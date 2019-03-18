@@ -16,5 +16,6 @@ int main(int argc, const char * argv[]) {
 	std::vector<Play*>* plays = parser->parseFile(&infile);
 	SeasonData* data = new SeasonData(plays);
 	
+	
 	return 0;
 }

@@ -12,7 +12,9 @@
 SeasonData::SeasonData(std::vector<Play*>* playData) :
 m_playData(playData)
 {
+	m_possessionData = new std::vector<Possession*>();
 	findEndsOfPossessions();
+	populatePossessions();
 }
 
 void SeasonData::findEndsOfPossessions()
@@ -65,9 +67,19 @@ void SeasonData::findEndsOfPossessions()
 
 void SeasonData::populatePossessions()
 {
-	
-	/*for (auto p : *m_playData)
+	int points = 0;
+	bool isTeamPlay = false;
+	for (const auto &p : *m_playData)
 	{
-		
-	}*/
+		points += p->getPoints();
+		if (p->getEndOfPoss())
+		{
+			isTeamPlay = ((p->getTeamPlay() && (p->getPlayType() == enums::PLAYTYPE::FGMAKE ||
+											   p->getPlayType() == enums::PLAYTYPE::FTMAKE)) ||
+						  (!p->getTeamPlay() && (p->getPlayType() == enums::PLAYTYPE::TOV ||
+												p->getPlayType() == enums::PLAYTYPE::DRB)));
+			m_possessionData->push_back(new Possession(points, isTeamPlay));
+			points = 0;
+		}
+	}
 }

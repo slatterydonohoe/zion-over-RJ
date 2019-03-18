@@ -36,3 +36,13 @@ bool Play::getTeamPlay()
 {
 	return m_isTeamPlay;
 }
+
+int Play::getPoints()
+{
+	return m_points;
+}
+
+bool Play::getEndOfPoss()
+{
+	return m_endOfPoss;
+}

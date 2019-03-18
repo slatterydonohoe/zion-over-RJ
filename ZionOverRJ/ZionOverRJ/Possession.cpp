@@ -8,7 +8,7 @@
 
 #include "Possession.h"
 
-Possession::Possession(bool tm, int pts) :
+Possession::Possession(int pts, bool tm) :
 m_isTeamPlay(tm),
 m_points(pts)
 {

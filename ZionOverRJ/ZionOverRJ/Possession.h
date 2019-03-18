@@ -14,7 +14,7 @@
 class Possession
 {
 public:
-	Possession(bool tm, int pts);
+	Possession(int pts, bool tm);
 	bool getTeamPlay();
 	int getPoints();
 private:

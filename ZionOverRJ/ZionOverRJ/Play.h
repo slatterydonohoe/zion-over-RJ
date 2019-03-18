@@ -20,6 +20,8 @@ public:
 	enums::PLAYTYPE getPlayType();
 	std::string getText();
 	bool getTeamPlay();
+	int getPoints();
+	bool getEndOfPoss();
 
 private:
 	std::string m_text;
