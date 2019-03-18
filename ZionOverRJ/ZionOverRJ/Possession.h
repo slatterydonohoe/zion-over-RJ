@@ -10,16 +10,19 @@
 #define Possession_h
 
 #include <stdio.h>
+#include <string>
 
 class Possession
 {
 public:
-	Possession(int pts, bool tm);
+	Possession(std::string lineup, int pts, bool tm);
 	bool getTeamPlay();
 	int getPoints();
+	std::string getLineupText();
 private:
 	bool m_isTeamPlay;
 	int m_points;
+	std::string m_lineupText;
 };
 
 #endif /* Possession_h */

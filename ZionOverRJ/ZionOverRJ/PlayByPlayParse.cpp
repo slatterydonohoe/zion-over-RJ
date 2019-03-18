@@ -38,6 +38,7 @@ PlayByPlayParse::PlayByPlayParse()
 	m_playTypes.insert(std::make_pair(enums::PLAYTYPE::OFOUL, "offensive foul"));
 	m_playTypes.insert(std::make_pair(enums::PLAYTYPE::TOV, "turnover"));
 	m_playTypes.insert(std::make_pair(enums::PLAYTYPE::LINEUP, "lineup change"));
+	m_playTypes.insert(std::make_pair(enums::PLAYTYPE::JUMPBALL, "Jump ball"));
 }
 
 std::vector<Play*>* PlayByPlayParse::parseFile(std::ifstream* infile)
@@ -63,7 +64,13 @@ Play* PlayByPlayParse::parseLine(std::string line)
 	if (line.find(m_playTypes[enums::PLAYTYPE::LINEUP]) != std::string::npos)
 	{
 		playType = enums::PLAYTYPE::LINEUP;
-		isTeamPlay = line.find("Devils")!= std::string::npos;
+		isTeamPlay = line.find("Devils") != std::string::npos;
+		return new Play(line, playType, pts, isTeamPlay);
+	}
+	else if (line.find(m_playTypes[enums::PLAYTYPE::JUMPBALL]) != std::string::npos)
+	{
+		playType = enums::PLAYTYPE::JUMPBALL;
+		isTeamPlay = line.find("Devils") != std::string::npos;
 		return new Play(line, playType, pts, isTeamPlay);
 	}
 	else
@@ -76,6 +83,12 @@ Play* PlayByPlayParse::parseLine(std::string line)
 			{
 				if (trimmedLine.find(pt.second) != std::string::npos)
 				{
+					if ((pt.first == enums::PLAYTYPE::FGMAKE ||
+						pt.first == enums::PLAYTYPE::FGMISS) &&
+						trimmedLine.find("free throw") != std::string::npos)
+					{
+						continue;
+					}
 					playType = pt.first;
 					break;
 				}

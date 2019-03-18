@@ -27,7 +27,8 @@ namespace enums
 		PFOUL,
 		OFOUL,
 		TOV,
-		LINEUP
+		LINEUP,
+		JUMPBALL
 	};
 	
 	enum PLAYER
@@ -50,3 +51,4 @@ namespace enums
 }
 
 #endif /* enums_h */
+

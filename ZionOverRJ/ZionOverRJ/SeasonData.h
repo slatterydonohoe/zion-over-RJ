@@ -10,18 +10,27 @@
 #define SeasonData_h
 
 #include <stdio.h>
+#include <vector>
 #include "Play.h"
 #include "Possession.h"
+#include "Player.h"
+
 class SeasonData
 {
 public:
 	SeasonData(std::vector<Play*>* playData);
 	
+	
 private:
 	void findEndsOfPossessions();
 	void populatePossessions();
+	void organizePlayerData();
+	
 	std::vector<Play*>* m_playData;
 	std::vector<Possession*>* m_possessionData;
+	
+	Player* m_Zion;
+	Player* m_RJ;
 };
 
 #endif /* SeasonData_h */

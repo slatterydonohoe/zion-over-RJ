@@ -8,7 +8,8 @@
 
 #include "Possession.h"
 
-Possession::Possession(int pts, bool tm) :
+Possession::Possession(std::string lineup, int pts, bool tm) :
+m_lineupText(lineup),
 m_isTeamPlay(tm),
 m_points(pts)
 {
@@ -21,4 +22,9 @@ bool Possession::getTeamPlay()
 int Possession::getPoints()
 {
 	return m_points;
+}
+
+std::string Possession::getLineupText()
+{
+	return m_lineupText;
 }
