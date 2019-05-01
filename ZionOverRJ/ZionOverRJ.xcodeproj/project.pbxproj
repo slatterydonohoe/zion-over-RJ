@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		DBFF96A4223C768E00158AAB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBFF96A3223C768E00158AAB /* main.cpp */; };
 		DBFF96AD223C905D00158AAB /* Play.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBFF96AB223C905D00158AAB /* Play.cpp */; };
-		DBFF96AF223C90F500158AAB /* enums.h in Sources */ = {isa = PBXBuildFile; fileRef = DBFF96AE223C90F500158AAB /* enums.h */; };
 		DBFF96B2223C91ED00158AAB /* PlayByPlayParse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBFF96B0223C91ED00158AAB /* PlayByPlayParse.cpp */; };
 		DBFF96B5223EBABC00158AAB /* Possession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBFF96B3223EBABC00158AAB /* Possession.cpp */; };
 		DBFF96B8223EF91100158AAB /* SeasonData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBFF96B6223EF91100158AAB /* SeasonData.cpp */; };
+		DBFF96BB223F200E00158AAB /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBFF96B9223F200E00158AAB /* Player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,13 +32,15 @@
 		DBFF96A3223C768E00158AAB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; usesTabs = 1; };
 		DBFF96AB223C905D00158AAB /* Play.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Play.cpp; sourceTree = "<group>"; };
 		DBFF96AC223C905D00158AAB /* Play.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Play.h; sourceTree = "<group>"; };
-		DBFF96AE223C90F500158AAB /* enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = enums.h; sourceTree = "<group>"; };
 		DBFF96B0223C91ED00158AAB /* PlayByPlayParse.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayByPlayParse.cpp; sourceTree = "<group>"; };
 		DBFF96B1223C91ED00158AAB /* PlayByPlayParse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayByPlayParse.h; sourceTree = "<group>"; };
 		DBFF96B3223EBABC00158AAB /* Possession.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Possession.cpp; sourceTree = "<group>"; };
 		DBFF96B4223EBABC00158AAB /* Possession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Possession.h; sourceTree = "<group>"; };
 		DBFF96B6223EF91100158AAB /* SeasonData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SeasonData.cpp; sourceTree = "<group>"; };
 		DBFF96B7223EF91100158AAB /* SeasonData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeasonData.h; sourceTree = "<group>"; };
+		DBFF96B9223F200E00158AAB /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		DBFF96BA223F200E00158AAB /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		DBFF96BC223F201C00158AAB /* enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = enums.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +78,13 @@
 				DBFF96AC223C905D00158AAB /* Play.h */,
 				DBFF96B3223EBABC00158AAB /* Possession.cpp */,
 				DBFF96B4223EBABC00158AAB /* Possession.h */,
-				DBFF96AE223C90F500158AAB /* enums.h */,
+				DBFF96BC223F201C00158AAB /* enums.h */,
 				DBFF96B0223C91ED00158AAB /* PlayByPlayParse.cpp */,
 				DBFF96B1223C91ED00158AAB /* PlayByPlayParse.h */,
 				DBFF96B6223EF91100158AAB /* SeasonData.cpp */,
 				DBFF96B7223EF91100158AAB /* SeasonData.h */,
+				DBFF96B9223F200E00158AAB /* Player.cpp */,
+				DBFF96BA223F200E00158AAB /* Player.h */,
 			);
 			path = ZionOverRJ;
 			sourceTree = "<group>";
@@ -144,11 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBFF96B8223EF91100158AAB /* SeasonData.cpp in Sources */,
+				DBFF96BB223F200E00158AAB /* Player.cpp in Sources */,
 				DBFF96A4223C768E00158AAB /* main.cpp in Sources */,
 				DBFF96AD223C905D00158AAB /* Play.cpp in Sources */,
 				DBFF96B2223C91ED00158AAB /* PlayByPlayParse.cpp in Sources */,
 				DBFF96B5223EBABC00158AAB /* Possession.cpp in Sources */,
-				DBFF96AF223C90F500158AAB /* enums.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
