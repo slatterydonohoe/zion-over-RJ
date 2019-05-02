@@ -72,14 +72,26 @@ if __name__ == "__main__":
         opening_lineup = LineupScraper(opp)
         of_ = open("../data/" + pbp.opp + "_plays.txt", "a")
         of_.write(opening_lineup.create_starting_lineup_change())
+
         plays_1H = pbp.build_1h()
-        for play in plays_1H:
-            of_.write(play)
+        if not plays_1H or "lineup change" in plays_1H[0]:
+            print("OOPS: First half file is wrong!")
+        else:
+            for play in plays_1H:
+                    of_.write(play)
 
         plays_2H = pbp.build_2h()
-        for play in plays_2H:
-            of_.write(play)
+        if not plays_2H or "lineup change" not in plays_2H[0]:
+            print("OOPS: Second half file is wrong!")
+        else:
+            for play in plays_2H:
+                of_.write(play)
 
         plays_OT = pbp.build_ot()
-        for play in plays_OT:
-            of_.write(play)
+        if plays_OT:
+            if plays_OT == plays_1H or plays_OT == plays_2H:
+                print("OOPS: OT file mismatch!")
+            else:
+                print("WOW: Found OT!")
+                for play in plays_OT:
+                    of_.write(play)
